@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabbed Content</title>
+    <script src="script/tabcontent.js" type="text/javascript"></script>
+    <link href="script/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background:#F6F9FC; font-family:Arial;">
+    <p></p>
+
+    <b>$scenarioID - $scenarioName</b>
+    <p>Execution status:</p><div class="$executionStatusClass">$executionStatus</div>
+    <ul>
+        <li>URL support: a hash id in the URL can select a tab</li>
+        <li>Bookmark support: select a tab via bookmark anchor</li>
+        <li>Select tabs by mouse over</li>
+        <li>Auto advance</li>
+        <li>Smooth transitional effect</li>
+        <li>Content can retrieved from other documents or pages through Ajax</li>
+        <li>... and more</li>
+    </ul>
+    <div >
+        <ul class="tabs" data-persist="true">
+            <li><a href="#view1">Results</a></li>
+            <li><a href="#view2">SOAP Request</a></li>
+            <li><a href="#view3">SOAP Response</a></li>
+        </ul>
+        <div class="tabcontents">
+            <div id="view1">
+                <!--b>$value1</b-->
+                <!--p>$value2</p-->
+
+                <table  id="hor-zebra1">
+                    <tr>
+                        <th>Info Header 1</th><th>Info Header 2</th><th>Info Header 3</th>
+                    </tr>
+                    #foreach( $obj in $objs )
+                    <tr><td>$obj</td><td>$obj</td><td>$obj</td></tr>
+                    #end
+
+                </table>
+                
+            </div>
+            <div id="view2">
+                <table  id="hor-zebra1">
+                    <tr>
+                        <th>DOX Request</th><th>TADH Request</th>
+                    </tr>
+
+                    <tr><td> <div style="block; word-wrap: break-word; width: 900px;"> <xmp>$doxSOAPRequest</xmp></div></td>
+                        <td> <div style="block; word-wrap: break-word; width: 900px;"> <xmp>$doxSOAPRequest</xmp></div></td></tr>
+
+
+                </table>
+            </div>
+            <div id="view3">
+                <table  id="hor-zebra1">
+                    <tr>
+                        <th>DOX Response</th><th>TADH Response</th>
+                    </tr>
+                    #foreach( $obj in $objs )
+                    <tr><td>$obj</td><td>$obj</td></tr>
+                    #end
+
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

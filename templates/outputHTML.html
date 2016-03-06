@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabbed Content</title>
+    <script src="script/tabcontent.js" type="text/javascript"></script>
+    <link href="script/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background:#F6F9FC; font-family:Arial;">
+    <p></p>
+
+    <b>1 - Search by rxm and partner name</b>
+    <p>Execution status:</p><div class="fail">FAIL</div>
+    <ul>
+        <li>URL support: a hash id in the URL can select a tab</li>
+        <li>Bookmark support: select a tab via bookmark anchor</li>
+        <li>Select tabs by mouse over</li>
+        <li>Auto advance</li>
+        <li>Smooth transitional effect</li>
+        <li>Content can retrieved from other documents or pages through Ajax</li>
+        <li>... and more</li>
+    </ul>
+    <div >
+        <ul class="tabs" data-persist="true">
+            <li><a href="#view1">Results</a></li>
+            <li><a href="#view2">SOAP Request</a></li>
+            <li><a href="#view3">SOAP Response</a></li>
+        </ul>
+        <div class="tabcontents">
+            <div id="view1">
+                <!--b>text1111</b-->
+                <!--p>text452342</p-->
+
+                <table  id="hor-zebra1">
+                    <tr>
+                        <th>Info Header 1</th><th>Info Header 2</th><th>Info Header 3</th>
+                    </tr>
+                                        <tr><td>asda</td><td>asda</td><td>asda</td></tr>
+                                        <tr><td>derg</td><td>derg</td><td>derg</td></tr>
+                                        <tr><td>tyjyh</td><td>tyjyh</td><td>tyjyh</td></tr>
+                    
+                </table>
+                
+            </div>
+            <div id="view2">
+                <table  id="hor-zebra1">
+                    <tr>
+                        <th>DOX Request</th><th>TADH Request</th>
+                    </tr>
+
+                    <tr><td> <div style="block; word-wrap: break-word; width: 900px;"> <xmp><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<soap12:Envelope xmlns:soap12="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soap12:Header/>
+  <soap12:Body>
+    <GetCitiesByCountry xmlns="http://www.webserviceX.NET">
+      <CountryName>Romania</CountryName>
+    </GetCitiesByCountry>
+  </soap12:Body>
+</soap12:Envelope>
+</xmp></div></td>
+                        <td> <div style="block; word-wrap: break-word; width: 900px;"> <xmp><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<soap12:Envelope xmlns:soap12="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soap12:Header/>
+  <soap12:Body>
+    <GetCitiesByCountry xmlns="http://www.webserviceX.NET">
+      <CountryName>Romania</CountryName>
+    </GetCitiesByCountry>
+  </soap12:Body>
+</soap12:Envelope>
+</xmp></div></td></tr>
+
+
+                </table>
+            </div>
+            <div id="view3">
+                <table  id="hor-zebra1">
+                    <tr>
+                        <th>DOX Response</th><th>TADH Response</th>
+                    </tr>
+                                        <tr><td>asda</td><td>asda</td></tr>
+                                        <tr><td>derg</td><td>derg</td></tr>
+                                        <tr><td>tyjyh</td><td>tyjyh</td></tr>
+                    
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
