@@ -1,7 +1,7 @@
 (function($) {
 	//https://github.com/keithclark/JQuery-Extended-Selectors/blob/master/jquery-extra-selectors.js
-	 function textEquals(m) {  
-        return this.text().match("^" + m[3] + "$");  
+	 function textEquals(elem,match) {  
+		 return elem.text().match("^" + match[3] + "$");  
 	 }
 
 	function getNthIndex(cur, dir) {
@@ -35,6 +35,10 @@
 	var pseudos = {
 		"first-of-type": function(elm) {
 			return getNthIndex(elm, "previousSibling") == 0;
+		},
+		
+		"textEquals": function(elm,match) {
+			return textEquals(elm,match);
 		},
 		"last-of-type": function(elm) { 
 			return getNthIndex(elm, "nextSibling") == 0;
