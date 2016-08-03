@@ -13,7 +13,7 @@
 	//This selector will find all texts starting with a particular text
 	$.expr[':'].textBeginningWithString = function(a, i, m) {
 		var pattern = new RegExp("^" + m[3]);
-		return $(a).innerText().match(pattern);
+		return $(a).text().match(pattern);
 	};
 	
 	//This selector will find all texts ending with a particular text
