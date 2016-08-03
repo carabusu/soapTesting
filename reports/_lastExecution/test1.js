@@ -31,5 +31,5 @@
 	//mine
 	
 	$.expr[':'].textEquals = function(a, i, m) {  
-    return $(a).text().match("^" + m[3] + "$");  
-};});
+    		return $(a).text().match("^" + m[3] + "$");  
+	};
