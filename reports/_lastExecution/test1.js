@@ -27,9 +27,3 @@
 		var pattern = new RegExp("^" + m[3], "m");
 		return $(a).text().match(pattern);
 	};
-	
-	//mine
-	
-	$.expr[':'].textEquals = function(a, i, m) {  
-    		return $(a).text().match("^" + m[3] + "$");  
-	};
