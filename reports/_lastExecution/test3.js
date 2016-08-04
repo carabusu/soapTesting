@@ -45,7 +45,8 @@
 		  }
 
 	};
-	$.expr[':'].containsFullText = function(a, i, m) {
+	
+	$.expr[':'].containsPartialText1 = function(a, i, m) {
 		   textSearch = m[3];
 		  textSearch = textSearch.replace(/\\/g, "");
 		  elemText = $(a).html().trim();
