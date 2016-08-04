@@ -50,10 +50,10 @@
 		  textSearch = textSearch.replace(/\\/g, "");
 		  elemText = $(a).html();
 		  elemText = elemText.replace(/&nbsp;/g, " ");
-		  //console.log("element: " + elemText);
-		  //console.log("text:    " + textSearch);
+		  console.log("element: " + elemText);
+		  console.log("text:    " + textSearch);
 		  if (elemText===textSearch) {
-		    //console.log("---" + elemText);
+		    console.log("---" + elemText);
 		    return $(a).text();
 		  }
 
