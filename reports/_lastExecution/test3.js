@@ -47,15 +47,15 @@
 	};
 	$.expr[':'].containsFullText = function(a, i, m) {
 		  textSearch = m[3];
-		  elemText = $(a).text().trim();
+		  elemText = $(a).html().trim();
 		  
 		  console.log("element: " + elemText);
-		  alert("element: " + elemText);
+		  //alert("element: " + elemText + "---" + m[3]);
 		  console.log("text:    " + textSearch);
 		  if (elemText===textSearch) {
 		    console.log("---" + elemText);
 		    return $(a).text();
 		  }
 
-	};
+	}
 
