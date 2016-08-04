@@ -46,7 +46,7 @@
 
 	};
 	
-	$.expr[':'].containsPartialText1 = function(a, i, m) {
+	$.expr[':'].mazga= function(a, i, m) {
 		   textSearch = m[3];
 		  textSearch = textSearch.replace(/\\/g, "");
 		  elemText = $(a).html().trim();
@@ -57,5 +57,4 @@
 		    //console.log("---" + elemText);
 		    return $(a).text();
 		  }
-
 	};
