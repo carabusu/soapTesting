@@ -37,8 +37,8 @@
 			return getNthIndex(elm, "previousSibling") == 0;
 		},
 		
-		"textEquals": function(elm,match) {
-			return textEquals(elm,match);
+		"textEquals":  function(elm) {
+			return getNthIndex(elm, "previousSibling") == 0;
 		},
 		"last-of-type": function(elm) { 
 			return getNthIndex(elm, "nextSibling") == 0;
