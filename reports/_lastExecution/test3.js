@@ -52,7 +52,7 @@
 		  console.log("element: " + elemText);
 		  alert("element: " + elemText);
 		  console.log("text:    " + textSearch);
-		  if (elemText===textSearch) {
+		  if (elemText==textSearch) {
 		    console.log("---" + elemText);
 		    return $(a).text();
 		  }
