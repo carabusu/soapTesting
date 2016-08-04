@@ -32,7 +32,7 @@
 		 return $(a).text().match("^" + m[3] + "$");  
 	};
 	
-	$.expr[':'].containsHTMLPartialText = function(a, i, m) {
+	$.expr[':'].containsPartialText = function(a, i, m) {
 		  textSearch = m[3];
 		  textSearch = textSearch.replace(/\\/g, "");
 		  elemText = $(a).html();
@@ -47,12 +47,12 @@
 	};
 	$.expr[':'].containsFullText = function(a, i, m) {
 		  textSearch = m[3];
-		  elemText = $(a).text();
+		  elemText = $(a).text().trim();
 		  
 		  console.log("element: " + elemText);
 		  alert("element: " + elemText);
 		  console.log("text:    " + textSearch);
-		  if (elemText==textSearch) {
+		  if (elemText===textSearch) {
 		    console.log("---" + elemText);
 		    return $(a).text();
 		  }
