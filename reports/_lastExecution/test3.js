@@ -37,7 +37,7 @@
 		  textSearch = textSearch.replace(/\\/g, "");
 		  elemText = $(a).html().trim();
 		  elemText = elemText.replace(/&nbsp;/g, " ");
-		  //console.log("element: " + elemText);
+		  console.log("element: " + elemText);
 		  //console.log("text:    " + textSearch);
 		  if (elemText.includes(textSearch)) {
 		    //console.log("---" + elemText);
