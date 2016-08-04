@@ -53,7 +53,8 @@
 		  console.log("element: " + elemText);
 		  //alert("element: " + elemText + "---" + m[3]);
 		  console.log("text:    " + textSearch);
-		  if (elemText==textSearch) {
+		  //if (elemText==textSearch) {
+		  if (elemText.includes(textSearch)) {
 		    console.log("---" + elemText);
 		    return $(a).text();
 		  }
