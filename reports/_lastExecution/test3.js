@@ -48,8 +48,11 @@
 	$.expr[':'].containsFullText = function(a, i, m) {
 		  textSearch = m[3];
 		  textSearch = textSearch.replace(/\\/g, "");
+		  textSearch=textSearch..replace(/ +(?= )/g,'');
 		  elemText = $(a).html().trim();
+		  
 		  elemText = elemText.replace(/&nbsp;/g, " ");
+		  elemText=elemText.replace(/ +(?= )/g,'');
 		  console.log("element: " + elemText);
 		  alert("element: " + elemText);
 		  console.log("text:    " + textSearch);
