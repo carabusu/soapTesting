@@ -25,7 +25,7 @@ jQuery(function($) {
 			  console.log("element: " + elemText);
 			  console.log("text:    " + textSearch);
 			  alert("text:    " + textSearch);
-			  if (elemText===textSearch) {
+			   if (elemText.includes(textSearch)) {
 			    console.log("---" + elemText);
 			    return $(a).text();
 		  	}
