@@ -24,6 +24,7 @@ jQuery(function($) {
 			  elemText = elemText.replace(/&nbsp;/g, " ");
 			  console.log("element: " + elemText);
 			  //console.log("text:    " + textSearch);
+			  alert("text:    " + textSearch);
 			  if (elemText===textSearch) {
 			    //console.log("---" + elemText);
 			    return $(a).text();
