@@ -23,10 +23,10 @@ jQuery(function($) {
 			  elemText = $(a).html().trim();
 			  elemText = elemText.replace(/&nbsp;/g, " ");
 			  console.log("element: " + elemText);
-			  //console.log("text:    " + textSearch);
+			  console.log("text:    " + textSearch);
 			  alert("text:    " + textSearch);
 			  if (elemText===textSearch) {
-			    //console.log("---" + elemText);
+			    console.log("---" + elemText);
 			    return $(a).text();
 		  	}
     }
