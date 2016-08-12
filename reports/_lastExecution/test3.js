@@ -8,7 +8,7 @@ jQuery(function($) {
 		  elemText = elemText.replace(/&nbsp;/g, " ");
 		  console.log("element: " + elemText);
 		  //console.log("text:    " + textSearch);
-		  if (elemText.includes(textSearch)) {
+		  if (elemText.includes(textSearch) && textSearch.includes(elemText)) {
 		    //console.log("---" + elemText);
 		    return $(a).text();
 		  }
