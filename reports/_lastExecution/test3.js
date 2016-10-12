@@ -33,6 +33,7 @@ jQuery(function($) {
 	});
 	
 
+	
 	jQuery.fn.extend({
 	    getMandatoryFields: function (a,i,m) {
 			var returnStepsCodeShort=".step()\n";
@@ -67,25 +68,27 @@ jQuery(function($) {
 				   if(attrElementID.includes('InputField')){
 					   returnStepsCodeShort=returnStepsCodeShort + "	.input(\"test\", Fields." + newLabelValue + ")\n";
 					   returnStepsCodeLong=returnStepsCodeLong + "pgmp.createRequest.input.type(\"test\", Fields." + newLabelValue + ".val()); \n"
-					   //console.log(".input(\"test\", Fields." + newLabelValue + ")");
-				   }
+			   	   //console.log(".input(\"test\", Fields." + newLabelValue + ")");
 			   }
-			   if ($(this).parent().find($(" textarea:visible")).length>0){
-				   returnStepsCodeShort=returnStepsCodeShort + "	.textArea(\"test\", Fields." + newLabelValue + ")\n";
-				   returnStepsCodeLong=returnStepsCodeLong + "pgmp.createRequest.textArea.type(\"test\", Fields." + newLabelValue + ".val()); \n"
-				   //console.log(".textArea(\"test\", Fields." + newLabelValue + ")" );
-			   }
-			   if ($(this).parent().find($(" select:visible")).length>0){
-				   returnStepsCodeShort=returnStepsCodeShort + "	.multiSelect(multiSelectValue, Fields." + newLabelValue + ")\n";
-				   returnStepsCodeLong=returnStepsCodeLong + "pgmp.createRequest.combo.selectValue(comboValue, Fields." + newLabelValue + ".val()); \n"
-				   //console.log(".multiSelect(multiSelectValue, Fields." + newLabelValue + ")" );
-			   }
-			   returnStepsCodeShort=returnStepsCodeShort+ "	.submit(\"Submit\",submitValue);\n"
-			});
-
-			return  returnStepsCodeShort + "\n\n\n" + returnStepsCodeLong;
-
-	    }
-	});
+		   }
+		   if ($(this).parent().find($(" textarea:visible")).length>0){
+			   returnStepsCodeShort=returnStepsCodeShort + "	.textArea(\"test\", Fields." + newLabelValue + ")\n";
+			   returnStepsCodeLong=returnStepsCodeLong + "pgmp.createRequest.textArea.type(\"test\", Fields." + newLabelValue + ".val()); \n"
+			   //console.log(".textArea(\"test\", Fields." + newLabelValue + ")" );
+		   }
+		   if ($(this).parent().find($(" select:visible")).length>0){
+			   returnStepsCodeShort=returnStepsCodeShort + "	.multiSelect(multiSelectValue, Fields." + newLabelValue + ")\n";
+			   returnStepsCodeLong=returnStepsCodeLong + "pgmp.createRequest.combo.selectValue(comboValue, Fields." + newLabelValue + ".val()); \n"
+			   //console.log(".multiSelect(multiSelectValue, Fields." + newLabelValue + ")" );
+		   }
+		   
+		});
+		returnStepsCodeShort=returnStepsCodeShort+ "	.submit(\"Submit\",submitValue);\n"
+		
+		return  returnStepsCodeShort + "\n\n\n" + returnStepsCodeLong;
+		
+    }
+});
+	
 	
 });
