@@ -22,11 +22,11 @@ jQuery(function($) {
 			  textSearch = textSearch.replace(/\\/g, "");
 			  elemText = $(a).html().trim();
 			  elemText = elemText.replace(/&nbsp;/g, " ");
-			  console.log("element: " + elemText);
-			  console.log("text:    " + textSearch);
-			  alert("text:    " + textSearch);
+			  console.log("element: " + elemText + " --- " textSearch + " - text");
+			  
+			  //alert("text:    " + textSearch);
 			   if (elemText.includes(textSearch)) {
-			    console.log("---" + elemText);
+			    console.log("$$$$$$$ element found: " + elemText);
 			    return $(a).text();
 		  	}
     }
